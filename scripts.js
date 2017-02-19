@@ -1,10 +1,39 @@
-var pilt = 0;
-var pildikood = new Array("pilt1.jpg", "pilt2.jpg", "pilt3.jpg", "pilt4.jpg", "pilt5.jpg");
+var picture = 0;
+var picturecode = new Array("pilt1.jpg", "pilt2.jpg", "pilt3.jpg", "pilt4.jpg", "pilt5.jpg");
+var condition = false;
+var smaller;
+var bigger;
 
 function starting(){						 
-//document.getElementById("taust").style.backgroundColor = pildikood[pilt]; 
-document.getElementById("taust").style.backgroundImage = "url(" + pildikood[pilt] + ")";
+//document.getElementById("base").style.backgroundColor = picturecode[picture]; 
+document.getElementById("base").style.backgroundImage = "url(" + picturecode[picture] + ")";
+
+ smaller = document.getElementById("big");
+ bigger = document.getElementById("small");
+	/*function remove() {
+		smaller.removeChild(bigger);
+		}
+	function bringBack() {
+		smaller.appendChild(bigger);
+	}
+	*/
+
 }
+
+function display() {
+		if (condition == false) {
+			smaller.removeChild(bigger);
+			document.getElementById("clockDisplay").style.fontSize = "129px";
+			condition = true;
+			
+		}
+		else if (condition == true) {
+			smaller.appendChild(bigger);
+			document.getElementById("clockDisplay").style.fontSize = "80px";
+			condition = false;
+		}
+	}
+	
 
 function renderTime() {
 	
@@ -52,35 +81,35 @@ function renderTime() {
 }
 // change to arial
 function changeFont() {
-	document.getElementById("taust").style.fontFamily = "arial";
+	document.getElementById("base").style.fontFamily = "arial";
 }
 //change to  Impact
 function changeFont2() {
-	document.getElementById("taust").style.fontFamily = "Impact";
+	document.getElementById("base").style.fontFamily = "Impact";
 }
 //change font to Courier New
 function changeFont3() {
-	document.getElementById("taust").style.fontFamily = "Courier New";
+	document.getElementById("base").style.fontFamily = "Courier New";
 }
 
 
 
 function changeNew(){
-	pilt++;
-	if(pilt > pildikood.length) {
-		pilt = 0;
+	picture++;
+	if(picture > picturecode.length) {
+		picture = 0;
 	}
-	//document.getElementById("taust").style.backgroundColor = pildikood[pilt]; vana funktsioon taustavärvidega
-	document.getElementById("taust").style.backgroundImage = "url(" + pildikood[pilt] + ")";
+	//document.getElementById("base").style.backgroundColor = picturecode[picture]; vana funktsioon baseavärvidega
+	document.getElementById("base").style.backgroundImage = "url(" + picturecode[picture] + ")";
 }
 
 function changeBack() {
-	pilt--;
-	if(pilt < 0) {
-		pilt = pildikood.length;
+	picture--;
+	if(picture < 0) {
+		picture = picturecode.length;
 	}
-	//document.getElementById("taust").style.backgroundColor = pildikood[pilt];	 vana funktsioon taustavärviga
-	document.getElementById("taust").style.backgroundImage = "url(" + pildikood[pilt] + ")";
+	//document.getElementById("base").style.backgroundColor = picturecode[picture];	 vana funktsioon baseavärviga
+	document.getElementById("base").style.backgroundImage = "url(" + picturecode[picture] + ")";
 }
 
 var currentSize = 80;
@@ -108,38 +137,45 @@ function fontBigger() {
 	}	
 }
 
+/*
+var myVar;
 
+function myFunction() {
+    myVar = setInterval(alertFunc, 3000);
+}
 
+function alertFunc() {
+    alert("Hello!");
+}
 
-
-
-//var pildikood = new Array("#d3d3d3", "#bdbdbd", "#a8a8a8", "#939393", "#7e7e7e", "#545454", "#2a2a2a", "#151515", "#000000");
+*/
+//var picturecode = new Array("#d3d3d3", "#bdbdbd", "#a8a8a8", "#939393", "#7e7e7e", "#545454", "#2a2a2a", "#151515", "#000000");
 /*function starting(){						 
-document.getElementById("taust").style.backgroundColor = pildikood[pilt];
+document.getElementById("base").style.backgroundColor = picturecode[picture];
 } */
 
 
 /*
-document.getElementById("taust").style.backgroundColor = "#b3ff99";	
+document.getElementById("base").style.backgroundColor = "#b3ff99";	
 
-var pilt = 0;
-var pildikood = new Array("#b3ff99", "#c2c2d6", "#b3cccc");
+var picture = 0;
+var picturecode = new Array("#b3ff99", "#c2c2d6", "#b3cccc");
 	function backgroundEdasi(){
-		pilt = pilt+1;
-		if (pilt > 2) {
-			pilt = 0;
+		picture = picture+1;
+		if (picture > 2) {
+			picture = 0;
 		}
-		document.getElementById("taust").style.backgroundColor = pildikood[pilt];
-		return pilt;
+		document.getElementById("base").style.backgroundColor = picturecode[picture];
+		return picture;
 		
 	}
 	function backgroundTagasi() {
-		pilt = pilt - 1;
-		if (pildikood < 0) {
-			pildikood = 2;
+		picture = picture - 1;
+		if (picturecode < 0) {
+			picturecode = 2;
 		}
-		document.getElementById("taust").style.backgroundColor = pildikood[pilt;];
-		return pilt;
+		document.getElementById("base").style.backgroundColor = picturecode[picture;];
+		return picture;
 	}
 	
 */
@@ -148,9 +184,9 @@ var pildikood = new Array("#b3ff99", "#c2c2d6", "#b3cccc");
 
 
 
-//tasutapilt test
+//tasutapicture test
 /*function changeImage(){
-		document.body.background = "pilt1.jpg";
+		document.body.background = "picture1.jpg";
 			}
 */
 

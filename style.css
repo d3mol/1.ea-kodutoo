@@ -1,4 +1,4 @@
-#taust{
+#base{
 	font-family: Trebuchet MS;
 	font-size: 80px;
 	color: white;
@@ -10,24 +10,29 @@
 	
 }
 /*  vana font sans-serif*/
-#nimi {
+#name {
 	font-family: Trebuchet MS;
 	position: absolute;
 	top: 50px;
 	font-size: 30px;
+	cursor: pointer;
+	
 }
 
-#edasi {
+#forward {
 	width: 3%;
 	position: absolute;
     right: 10px;
-	top: 50%;	
+	top: 50%;
+	cursor: pointer;
+	
 }
-#tagasi {
+#backward {
 	width: 3%;
 	position: absolute;
     left: 10px;
 	top: 50%;
+	cursor: pointer;
 }
 
 
@@ -57,6 +62,7 @@
 	position: absolute;
 	bottom: 80px;
 	left: 615px;
+	cursor: pointer;
 }
 #font1:hover {
 	background-color: #FFFFFF;
@@ -77,7 +83,8 @@
 	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 	position: absolute;
 	bottom: 80px;
-	left: 445px;	
+	left: 445px;
+	cursor: pointer;	
 }
 #font2:hover {
 	background-color: #FFFFFF;
@@ -100,6 +107,7 @@
 	position: absolute;
 	bottom: 80px;
 	left: 275px;
+	cursor: pointer;
 }
 #font3:hover {
 	background-color: #FFFFFF;
@@ -129,6 +137,7 @@
 	position: absolute;
 	bottom: 10px;
 	left: 534px;
+	cursor: pointer;
 }
 #plus:hover {
 	background-color: #FFFFFF;
@@ -151,12 +160,14 @@
 	position: absolute;
 	bottom: 10px;
 	left: 275px;
+	cursor: pointer;
 	
 }
 #minus:hover {
 	background-color: #FFFFFF;
 	color: #2196F3;
 	border-color: #2196F3;
+	
 }
 
 #display {
@@ -174,6 +185,7 @@
 	position: absolute;
 	top: 5px;
 	left: 5px;
+	cursor: pointer;
 	
 }
 #display:hover {
